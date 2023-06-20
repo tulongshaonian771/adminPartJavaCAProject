@@ -1,6 +1,7 @@
 package com.example.admincapart.Service;
 
 import com.example.admincapart.Model.Lecturer;
+import com.example.admincapart.Model.Student;
 import com.example.admincapart.Repository.LecturerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,9 @@ public class LecturerService {
     public Lecturer getLecturerById(Integer id) throws Exception {
         return lecturerRepository.findById(id)
                 .orElseThrow(() -> new Exception("Lecturer not found with id: " + id));
+    }
+    public Lecturer createLecturer(Lecturer lecturer) {
+        return lecturerRepository.save(lecturer);
     }
 
     public Lecturer updateLecturer(Integer id, Lecturer updatedLecturer) throws Exception {

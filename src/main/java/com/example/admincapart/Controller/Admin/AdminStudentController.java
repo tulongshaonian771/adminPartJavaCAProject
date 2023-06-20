@@ -18,7 +18,7 @@ public class AdminStudentController {
         this.studentService = studentService;
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     public ResponseEntity<List<Student>> getAllStudents() {
         List<Student> students = studentService.getAllStudents();
         return new ResponseEntity<>(students, HttpStatus.OK);
