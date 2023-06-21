@@ -20,4 +20,5 @@ public class CourseStudent {
 
     private Double grade;
     private Integer status;
+    private Integer requestStatus;
 }

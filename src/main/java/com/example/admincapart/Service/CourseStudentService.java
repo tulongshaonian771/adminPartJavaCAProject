@@ -35,6 +35,7 @@ public class CourseStudentService {
                 .orElseThrow(() -> new Exception("Course student not found with id: " + id));
 
         courseStudent.setCourse(updatedCourseStudent.getCourse());
+        courseStudent.setRequestStatus(updatedCourseStudent.getRequestStatus());
         courseStudent.setStudent(updatedCourseStudent.getStudent());
         courseStudent.setGrade(updatedCourseStudent.getGrade());
 

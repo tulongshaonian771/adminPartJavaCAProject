@@ -15,6 +15,10 @@ const Sidebar = ({ onChangeStatus }) => {
         onChangeStatus(3);
     };
 
+    const handleClick4 = () => {
+        onChangeStatus(4);
+    };
+
     return (
         <div className="sidebar">
             <ul>
@@ -26,6 +30,9 @@ const Sidebar = ({ onChangeStatus }) => {
                 </li>
                 <li>
                     <Button onClick={handleClick3}>ManageCourse</Button>
+                </li>
+                <li>
+                    <Button onClick={handleClick4}>ManageEnrolment</Button>
                 </li>
             </ul>
         </div>
